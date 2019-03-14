@@ -5,10 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import perso.chabanoles.graphql.repositories.QuotationRepository;
+import perso.chabanoles.graphql.repositories.RequestRepository;
 import perso.chabanoles.graphql.repositories.SupplierRepository;
 
 @RestController
 public class Endpoint {
+
 
     @Autowired
     private QuotationRepository quotationRepository;
@@ -16,8 +18,8 @@ public class Endpoint {
     @Autowired
     private SupplierRepository supplierRepositoryRepository;
 
-    /* Exercise: Create the Request Repository  and display the count in the index below */
-
+    @Autowired
+    private RequestRepository requestRepository;
 
 
     public Endpoint() throws Exception {
@@ -28,6 +30,7 @@ public class Endpoint {
         return "The system contains currently: <br>" +
                 "<ul><li>" + quotationRepository.find(0,100).size() + " quotation(s)</li>" +
                 "<li>"+supplierRepositoryRepository.find(0,100).size() +" supplier(s)</li>" +
+                "<li>"+requestRepository.find(0,100).size() +" request(s)</li>" +
                 "</ul>"
                 ;
     }
