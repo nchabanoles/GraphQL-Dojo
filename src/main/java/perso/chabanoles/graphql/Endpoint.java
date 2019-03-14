@@ -1,13 +1,34 @@
 package perso.chabanoles.graphql;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import perso.chabanoles.graphql.repositories.QuotationRepository;
+import perso.chabanoles.graphql.repositories.SupplierRepository;
 
 @RestController
 public class Endpoint {
 
-    @RequestMapping("/")
-    public String index() {
-        return "If you can read me it means you are ready to move on to the next step of the exercise!";
+    @Autowired
+    private QuotationRepository quotationRepository;
+
+    @Autowired
+    private SupplierRepository supplierRepositoryRepository;
+
+    /* Exercise: Create the Request Repository  and display the count in the index below */
+
+
+
+    public Endpoint() throws Exception {
+    }
+
+    @RequestMapping("/rest/stats")
+    public String index() throws Exception {
+        return "The system contains currently: <br>" +
+                "<ul><li>" + quotationRepository.find(0,100).size() + " quotation(s)</li>" +
+                "<li>"+supplierRepositoryRepository.find(0,100).size() +" supplier(s)</li>" +
+                "</ul>"
+                ;
     }
 }
