@@ -13,7 +13,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 bootJar {
-    baseName = 'gs-spring-boot'
+    archiveBaseName = 'graphql-dojo'
     version =  '0.1.0'
 }
 
@@ -27,15 +27,15 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    
-    
+
+
     /* 1 un-conmment the following dependencies to add the minimum graphQL deps to implement your Java server with Spring Boot */
 
     //compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.7.0'
 
     //compile 'com.graphql-java-kickstart:graphql-java-tools:5.5.1'
 
-    
+
     /* 2 un-comment those dependencies to have client applications available directly from your browser */
 
     // to embed GraphiQL tool - will be exposed at /graphiql
