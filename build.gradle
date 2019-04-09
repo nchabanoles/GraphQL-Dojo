@@ -27,25 +27,4 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-
-
-    /* 1 un-conmment the following dependencies to add the minimum graphQL deps to implement your Java server with Spring Boot */
-
-    //compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.7.0'
-
-    //compile 'com.graphql-java-kickstart:graphql-java-tools:5.5.1'
-
-
-    /* 2 un-comment those dependencies to have client applications available directly from your browser */
-
-    // to embed GraphiQL tool - will be exposed at /graphiql
-    //runtime 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.7.0'
-
-    /* Optional: you can have a look to other client tools */
-
-    // to embed Altair tool - will be exposed at /altair
-    //runtime 'com.graphql-java-kickstart:altair-spring-boot-starter:5.7.0'
-
-    // to embed Voyager tool - will be exposed at /voyager
-    //runtime 'com.graphql-java-kickstart:voyager-spring-boot-starter:5.7.0'
 }
