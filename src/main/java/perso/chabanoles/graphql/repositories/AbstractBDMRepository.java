@@ -12,6 +12,12 @@ import org.bonitasoft.engine.util.APITypeManager;
 
 public abstract class AbstractBDMRepository<T extends BusinessObjectDAO> {
 
+    /*
+    * For the sake of simplicity for this internal Dojo, connection information are stored in a static section.
+    * As a prerequisite a Bonita server is supposed to be available, i.e. up and running, with the Procurement 1.0 version
+    * deployed on top of ACME organization at the address 192.168.1.62. A docker image could be provided in a future version of this Dojo.
+    * */
+
     static {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("org.bonitasoft.engine.api-type.parameters", "server.url, application.name");

@@ -29,6 +29,10 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
 
+
+    /* To setup a java project relying on the Bonita Engine Java APIs and the BDM of your project, uncomment the following deps. */
+    
+    /*
     compile("com.bonitasoft.engine:bonita-client-sp:7.9.0.W5")
 
     compile("com.bonitasoft.engine:bonita-common-sp:7.9.0.W5")
@@ -36,5 +40,6 @@ dependencies {
     compile("com.company.model:bdm-client:1.0.0")
 
     compile("com.company.model:bdm-dao:1.0.0")
+    */
     
 }
