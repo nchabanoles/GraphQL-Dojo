@@ -1,0 +1,14 @@
+schema {
+    query: Query
+}
+
+type Query {
+    allRequests(from: Int, pageSize: Int): [Request]
+}
+
+type Request {
+    persistenceId: ID!
+    createdBy: String!
+    status: String!
+}
+

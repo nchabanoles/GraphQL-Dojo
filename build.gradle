@@ -37,17 +37,10 @@ dependencies {
 
     compile("com.company.model:bdm-dao:1.0.0")
 
-    /* 1 un-comment the following dependencies to add the minimum graphQL deps to implement your Java server with Spring Boot */
-
-    compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.7.0'
-
-    compile 'com.graphql-java-kickstart:graphql-java-tools:5.5.1'
-
-
-    /* 2 un-comment those dependencies to have client applications available directly from your browser */
+    /* 1) un-comment those dependencies to have client applications available directly from your browser */
 
     // to embed GraphiQL tool - will be exposed at /graphiql
-    runtime 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.7.0'
+    // runtime 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.7.0'
 
     /* Optional: you can have a look to other client tools */
 
@@ -56,4 +49,14 @@ dependencies {
 
     // to embed Voyager tool - will be exposed at /voyager
     //runtime 'com.graphql-java-kickstart:voyager-spring-boot-starter:5.7.0'
+
+
+    /* 2) un-comment the following dependencies to add the minimum graphQL deps to implement your Java server with Spring Boot */
+/*
+    compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.7.0'
+
+    compile 'com.graphql-java-kickstart:graphql-java-tools:5.5.1'
+*/
+
+
 }
