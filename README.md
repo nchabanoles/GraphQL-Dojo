@@ -7,24 +7,20 @@ By convention the branch name starts with the step number, e.g. the 2nd step of 
 The readme.md file will differ on each branch and give you the general objective of the exercice.
 Files to be modified, will contain comments to help you understand what to do.
 
-In the 2_init_GraphQL branch (current), we are going to build expose our first GraphQL endpoint.
+In the 3_extend_schema branch (current), we are going to expose more queries and types.
 
-## Install a GraphQL client
-To help us test (manually) our GraphQL endpoint we will use a client application that allows us to discover, browse and call easyly our APIs: GraphiQL.
+## Expose Quotations
 
+### Update schema definition
+1) Declare Quotation type in the schema.graphqls schema file
+2) Add a allQuotations query in the schema.graphqls schema file
+3) Add a allQuotations method in the Query bean
 
-### Add GraphiQL deps
-1) Un-comment the GraphiQL tool deps in the build.gradle
+*Note:* At this stage if you browse http://localhost:9000/graphiql you should be able to list quotations.
 
-*Note:* At this stage if you browse http://localhost:9000/graphiql you should see the GraphiQL client. But we did not expose any GraphQL endpoint yet...
-
-2) Un-comment the minimal list of deps needed to use GraphQL in a Java project. This will allow some magic later on. (wait and see...)
-
-## Expose a GraphQL endpoint
-1) Read the schema.graphqls schema definition
-2) Create a new bean Query class that implements GraphQLQueryResolver and exposes the method described in the schema
-Here the magic happens, the Spring Boot GraphQL starter automatically finds the schema files and the GraphQL java tools automaically wire up the beans to expose the GraphQL end point on /graphql.
-3) Use GraphiQL to list all requests from the Bonita BDM
+4) Declare a new quotations attribute for the type Request in the schema definition
+5) Create a RequestResolver class that implements GraphQLResolver and exposed a getQuotations(Request) method
+6) Enjoy you graph of objects!
 
 ### Build command
 ./gradlew build
@@ -38,3 +34,8 @@ java -jar build/libs/graphql-dojo-0.1.0.jar
 
 ### Browse GraphQL APIs
 http://localhost:9000/graphiql
+
+## To go further
+### Manage suppliers
+### Expose all the attributes of all objects
+### Expose methods to find requests by status
