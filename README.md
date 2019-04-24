@@ -10,7 +10,7 @@ Files to be modified, will contain comments to help you understand what to do.
 In the 2_init_GraphQL branch (current), we are going to build expose our first GraphQL endpoint.
 
 ## Install a GraphQL client
-To help us test (manually) our GraphQL endpoint we will use a client application that allows us to discover, browse and call easyly our APIs: GraphiQL.
+To help us test (manually) our GraphQL endpoint we will use a client application that allows us to discover, browse and call easily our APIs: GraphiQL.
 
 
 ### Add GraphiQL deps
