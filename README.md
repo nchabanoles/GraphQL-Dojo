@@ -17,6 +17,8 @@ Moreover you will need the bdm-client deps describing the Procurement 1.0 applic
 
 *Note:* the easiest to get those deps is to start a Bonita Studio locally and install the procurement example available in the Studio Welcome Page.
 
+Then update the build.gradle file to uncomment the dependencies needed to execute the project.
+
 If the compilation fails (prior to any change) it means that you do not have all the dependencies resolved properly.
 
 ## Create the RequestRepository
