@@ -14,7 +14,7 @@ public class Endpoint {
     private QuotationRepository quotationRepository;
 
     @Autowired
-    private SupplierRepository supplierRepositoryRepository;
+    private SupplierRepository supplierRepository;
 
     /* Exercise: Create the Request Repository  and display the count in the index below */
 
@@ -27,7 +27,7 @@ public class Endpoint {
     public String index() throws Exception {
         return "The system contains currently: <br>" +
                 "<ul><li>" + quotationRepository.find(0,100).size() + " quotation(s)</li>" +
-                "<li>"+supplierRepositoryRepository.find(0,100).size() +" supplier(s)</li>" +
+                "<li>"+supplierRepository.find(0,100).size() +" supplier(s)</li>" +
                 "</ul>"
                 ;
     }
